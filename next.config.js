@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["localhost", "picsum.photos"], // <== Domain name
+    domains: ["localhost", "picsum.photos", "cdn.pixabay.com"], // <== Domain name
   },
 };
 

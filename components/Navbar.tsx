@@ -8,7 +8,7 @@ interface NavbarProps {}
 
 const Navbar: FC<NavbarProps> = ({}) => {
   return (
-    <div className="sticky top-0 left-0 bg-[#172035] shadow-xl py-2 px-3">
+    <div className="sticky top-0 left-0 z-50 bg-[#172035] shadow-xl py-2 px-3">
       <div className="flex items-center gap-4 mx-auto">
         <button className="flex items-center rounded-full">
           <Image

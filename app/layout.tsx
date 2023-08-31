@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "@/styles/globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { cn } from "@/lib/utils";
+import QueryProvider from "@/components/providers/QueryProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,10 +21,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className={cn("bg-[#172035]", inter.className)}>{children}</body>
-      </html>
-    </ClerkProvider>
+    <html lang="en">
+      <ClerkProvider>
+        <body className={cn("bg-[#172035]", inter.className)}>
+          <QueryProvider>{children}</QueryProvider>
+        </body>
+      </ClerkProvider>
+    </html>
   );
 }
